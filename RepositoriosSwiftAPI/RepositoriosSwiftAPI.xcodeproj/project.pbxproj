@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		7F98F08C246B629900165400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F98F08B246B629900165400 /* Assets.xcassets */; };
 		7F98F08F246B629900165400 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F98F08D246B629900165400 /* LaunchScreen.storyboard */; };
 		7F98F09A246B629900165400 /* RepositoriosSwiftAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98F099246B629900165400 /* RepositoriosSwiftAPITests.swift */; };
+		7F98F0A9246B69C400165400 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98F0A8246B69C400165400 /* Endpoint.swift */; };
+		7F98F0AC246B6A1600165400 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98F0AB246B6A1600165400 /* RequestMethod.swift */; };
 		BE48AA982D2AEFB14A130F4E /* Pods_RepositoriosSwiftAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78622D17C4EBA6E9FD861BDC /* Pods_RepositoriosSwiftAPITests.framework */; };
 		ED04B10916DF8AAAAC5C5A83 /* Pods_RepositoriosSwiftAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F517E09A58CE0128344BC98 /* Pods_RepositoriosSwiftAPI.framework */; };
 /* End PBXBuildFile section */
@@ -44,6 +46,8 @@
 		7F98F095246B629900165400 /* RepositoriosSwiftAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepositoriosSwiftAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F98F099246B629900165400 /* RepositoriosSwiftAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriosSwiftAPITests.swift; sourceTree = "<group>"; };
 		7F98F09B246B629900165400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F98F0A8246B69C400165400 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		7F98F0AB246B6A1600165400 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
 		A28B9044872146D9B964D4B7 /* Pods-RepositoriosSwiftAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepositoriosSwiftAPI.debug.xcconfig"; path = "Target Support Files/Pods-RepositoriosSwiftAPI/Pods-RepositoriosSwiftAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		DA61E7FEC5B077A5B57718A4 /* Pods-RepositoriosSwiftAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepositoriosSwiftAPITests.debug.xcconfig"; path = "Target Support Files/Pods-RepositoriosSwiftAPITests/Pods-RepositoriosSwiftAPITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,7 +89,6 @@
 				DA61E7FEC5B077A5B57718A4 /* Pods-RepositoriosSwiftAPITests.debug.xcconfig */,
 				0E51D828711CFFF5E5FAE034 /* Pods-RepositoriosSwiftAPITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -114,6 +117,7 @@
 			children = (
 				7F98F086246B629400165400 /* ViewController.swift */,
 				7F98F088246B629400165400 /* Main.storyboard */,
+				7F98F0A7246B696C00165400 /* Data */,
 				7F98F0A4246B65D800165400 /* LaunchScreen */,
 				7F98F0A5246B661800165400 /* Resources */,
 			);
@@ -154,6 +158,31 @@
 				7F98F084246B629400165400 /* SceneDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		7F98F0A7246B696C00165400 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7F98F0AA246B69FB00165400 /* Endpoint */,
+				7F98F0AD246B6B3900165400 /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		7F98F0AA246B69FB00165400 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				7F98F0A8246B69C400165400 /* Endpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		7F98F0AD246B6B3900165400 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7F98F0AB246B6A1600165400 /* RequestMethod.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +355,8 @@
 			files = (
 				7F98F087246B629400165400 /* ViewController.swift in Sources */,
 				7F98F083246B629400165400 /* AppDelegate.swift in Sources */,
+				7F98F0A9246B69C400165400 /* Endpoint.swift in Sources */,
+				7F98F0AC246B6A1600165400 /* RequestMethod.swift in Sources */,
 				7F98F085246B629400165400 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
