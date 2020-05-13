@@ -9,7 +9,7 @@
 import PromiseKit
 
 protocol SwiftRepositoriesInteractorProtocol: class {
-    func getSwiftRepositories() -> Promise<SwiftRepositories>
+    func getSwiftRepositories() -> Promise<SwiftRepositoriesDataClassObject>
 }
 
 class SwiftRepositoriesInteractor: SwiftRepositoriesInteractorProtocol {
@@ -20,7 +20,7 @@ class SwiftRepositoriesInteractor: SwiftRepositoriesInteractorProtocol {
         self.repository = repository
     }
     
-    func getSwiftRepositories() -> Promise<SwiftRepositories> {
+    func getSwiftRepositories() -> Promise<SwiftRepositoriesDataClassObject> {
         return repository.getSwiftRepositories()
     }
 }

@@ -10,12 +10,12 @@ import Foundation
 import PromiseKit
 
 protocol SwiftReposRepositoryProtocol: class {
-    func getSwiftRepositories() -> Promise<SwiftRepositories>
+    func getSwiftRepositories() -> Promise<SwiftRepositoriesDataClassObject>
 }
 
 class SwiftReposRepository: APIClient, SwiftReposRepositoryProtocol {
     
-    func getSwiftRepositories() -> Promise<SwiftRepositories> {
-        return dispatchRequest(with: SwiftRepositoriesEndpoints.getSwiftRepositories.request, decodingType: SwiftRepositories.self)
+    func getSwiftRepositories() -> Promise<SwiftRepositoriesDataClassObject> {
+        return dispatchRequest(with: SwiftRepositoriesEndpoints.getSwiftRepositories.request, decodingType: SwiftRepositoriesDataClassObject.self)
     }
 }
