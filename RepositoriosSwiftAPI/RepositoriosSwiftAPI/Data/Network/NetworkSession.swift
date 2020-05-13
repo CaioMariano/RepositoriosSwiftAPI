@@ -9,7 +9,7 @@
 import Foundation
 import PromiseKit
 
-class NetwordSession {
+class NetworkSession {
     
     private var session: URLSession
     
