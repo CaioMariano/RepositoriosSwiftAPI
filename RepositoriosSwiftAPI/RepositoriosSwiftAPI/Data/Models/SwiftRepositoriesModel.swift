@@ -9,10 +9,6 @@
 import UIKit
 
 struct SwiftRepositories: Codable {
-    let data: SwiftRepositoriesDataClassObject
-}
-
-struct SwiftRepositoriesDataClassObject: Codable {
     let items: [SwiftRepositoriesItems]
 }
 
