@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7F40AE88246C94D6006D4DDE /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F40AE87246C94D6006D4DDE /* RepositoriesViewModel.swift */; };
+		7F40AE8D246C9A29006D4DDE /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F40AE8B246C9A29006D4DDE /* RepositoryTableViewCell.xib */; };
+		7F40AE8E246C9A29006D4DDE /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F40AE8C246C9A29006D4DDE /* RepositoryTableViewCell.swift */; };
 		7F98F083246B629400165400 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98F082246B629400165400 /* AppDelegate.swift */; };
 		7F98F085246B629400165400 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98F084246B629400165400 /* SceneDelegate.swift */; };
 		7F98F087246B629400165400 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98F086246B629400165400 /* RepositoriesViewController.swift */; };
@@ -44,6 +46,8 @@
 		6F517E09A58CE0128344BC98 /* Pods_RepositoriosSwiftAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RepositoriosSwiftAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78622D17C4EBA6E9FD861BDC /* Pods_RepositoriosSwiftAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RepositoriosSwiftAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F40AE87246C94D6006D4DDE /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
+		7F40AE8B246C9A29006D4DDE /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
+		7F40AE8C246C9A29006D4DDE /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		7F98F07F246B629400165400 /* RepositoriosSwiftAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepositoriosSwiftAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F98F082246B629400165400 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F98F084246B629400165400 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 			children = (
 				7F98F088246B629400165400 /* Repositories.storyboard */,
 				7F98F086246B629400165400 /* RepositoriesViewController.swift */,
+				7F40AE8A246C99E0006D4DDE /* SubViews */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -132,6 +137,23 @@
 				7F40AE87246C94D6006D4DDE /* RepositoriesViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7F40AE8A246C99E0006D4DDE /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				7F40AE8F246C9A38006D4DDE /* RepositoryCell */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		7F40AE8F246C9A38006D4DDE /* RepositoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				7F40AE8B246C9A29006D4DDE /* RepositoryTableViewCell.xib */,
+				7F40AE8C246C9A29006D4DDE /* RepositoryTableViewCell.swift */,
+			);
+			path = RepositoryCell;
 			sourceTree = "<group>";
 		};
 		7F98F076246B629400165400 = {
@@ -344,6 +366,7 @@
 				7F98F08F246B629900165400 /* LaunchScreen.storyboard in Resources */,
 				7F98F08C246B629900165400 /* Assets.xcassets in Resources */,
 				7F98F08A246B629400165400 /* Repositories.storyboard in Resources */,
+				7F40AE8D246C9A29006D4DDE /* RepositoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +457,7 @@
 				7F98F0AF246B6E6500165400 /* NetworkSession.swift in Sources */,
 				7F40AE88246C94D6006D4DDE /* RepositoriesViewModel.swift in Sources */,
 				7F98F0B3246B712600165400 /* APIError.swift in Sources */,
+				7F40AE8E246C9A29006D4DDE /* RepositoryTableViewCell.swift in Sources */,
 				7F98F0BE246B8A8600165400 /* SwiftRepositoriesInteractor.swift in Sources */,
 				7F98F0AC246B6A1600165400 /* RequestMethod.swift in Sources */,
 				7F98F0B5246B7D7100165400 /* SwiftRepositoriesEndpoint.swift in Sources */,
