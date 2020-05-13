@@ -11,10 +11,10 @@ import UIKit
 enum SwiftRepositoriesEndpoints: Endpoint {
     case getSwiftRepositories
     
-    var query: [URLQueryItem] {
+    var queryItems: [URLQueryItem] {
         switch self {
         case .getSwiftRepositories:
-            return [URLQueryItem(name: "language", value: "swift"),
+            return [URLQueryItem(name: "q", value: "language:swift"),
                     URLQueryItem(name: "sort", value: "stars")]
         }
     }

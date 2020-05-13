@@ -22,6 +22,7 @@
 		7F98F0B5246B7D7100165400 /* SwiftRepositoriesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98F0B4246B7D7100165400 /* SwiftRepositoriesEndpoint.swift */; };
 		7F98F0B8246B81AD00165400 /* SwiftRepositoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98F0B7246B81AD00165400 /* SwiftRepositoriesModel.swift */; };
 		7F98F0BB246B881700165400 /* SwiftReposRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98F0BA246B881700165400 /* SwiftReposRepository.swift */; };
+		7F98F0BE246B8A8600165400 /* SwiftRepositoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98F0BD246B8A8600165400 /* SwiftRepositoriesInteractor.swift */; };
 		BE48AA982D2AEFB14A130F4E /* Pods_RepositoriosSwiftAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78622D17C4EBA6E9FD861BDC /* Pods_RepositoriosSwiftAPITests.framework */; };
 		ED04B10916DF8AAAAC5C5A83 /* Pods_RepositoriosSwiftAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F517E09A58CE0128344BC98 /* Pods_RepositoriosSwiftAPI.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		7F98F0B4246B7D7100165400 /* SwiftRepositoriesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRepositoriesEndpoint.swift; sourceTree = "<group>"; };
 		7F98F0B7246B81AD00165400 /* SwiftRepositoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRepositoriesModel.swift; sourceTree = "<group>"; };
 		7F98F0BA246B881700165400 /* SwiftReposRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftReposRepository.swift; sourceTree = "<group>"; };
+		7F98F0BD246B8A8600165400 /* SwiftRepositoriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRepositoriesInteractor.swift; sourceTree = "<group>"; };
 		A28B9044872146D9B964D4B7 /* Pods-RepositoriosSwiftAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepositoriosSwiftAPI.debug.xcconfig"; path = "Target Support Files/Pods-RepositoriosSwiftAPI/Pods-RepositoriosSwiftAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		DA61E7FEC5B077A5B57718A4 /* Pods-RepositoriosSwiftAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepositoriosSwiftAPITests.debug.xcconfig"; path = "Target Support Files/Pods-RepositoriosSwiftAPITests/Pods-RepositoriosSwiftAPITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +177,7 @@
 		7F98F0A7246B696C00165400 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				7F98F0BC246B8A1600165400 /* Interactor */,
 				7F98F0B9246B87E900165400 /* Repository */,
 				7F98F0B6246B817B00165400 /* Models */,
 				7F98F0AA246B69FB00165400 /* Endpoint */,
@@ -217,6 +220,14 @@
 				7F98F0BA246B881700165400 /* SwiftReposRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		7F98F0BC246B8A1600165400 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7F98F0BD246B8A8600165400 /* SwiftRepositoriesInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +406,7 @@
 				7F98F0A9246B69C400165400 /* Endpoint.swift in Sources */,
 				7F98F0AF246B6E6500165400 /* NetworkSession.swift in Sources */,
 				7F98F0B3246B712600165400 /* APIError.swift in Sources */,
+				7F98F0BE246B8A8600165400 /* SwiftRepositoriesInteractor.swift in Sources */,
 				7F98F0AC246B6A1600165400 /* RequestMethod.swift in Sources */,
 				7F98F0B5246B7D7100165400 /* SwiftRepositoriesEndpoint.swift in Sources */,
 				7F98F085246B629400165400 /* SceneDelegate.swift in Sources */,
@@ -489,7 +501,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -543,7 +555,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -558,6 +570,7 @@
 			baseConfigurationReference = A28B9044872146D9B964D4B7 /* Pods-RepositoriosSwiftAPI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8ZYAQU4NZ5;
 				INFOPLIST_FILE = "$(SRCROOT)/RepositoriosSwiftAPI/Resources/Info.plist";
@@ -568,8 +581,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = caio.RepositoriosSwiftAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -578,6 +592,7 @@
 			baseConfigurationReference = 0EDAA5CA11A0FB7CD27208A0 /* Pods-RepositoriosSwiftAPI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8ZYAQU4NZ5;
 				INFOPLIST_FILE = "$(SRCROOT)/RepositoriosSwiftAPI/Resources/Info.plist";
@@ -588,8 +603,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = caio.RepositoriosSwiftAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -599,8 +615,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8ZYAQU4NZ5;
+				DEVELOPMENT_TEAM = HKK79B28M7;
 				INFOPLIST_FILE = RepositoriosSwiftAPITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -610,6 +628,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = caio.RepositoriosSwiftAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RepositoriosSwiftAPI.app/RepositoriosSwiftAPI";
@@ -622,8 +642,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8ZYAQU4NZ5;
+				DEVELOPMENT_TEAM = HKK79B28M7;
 				INFOPLIST_FILE = RepositoriosSwiftAPITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -633,6 +655,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = caio.RepositoriosSwiftAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RepositoriosSwiftAPI.app/RepositoriosSwiftAPI";

@@ -18,6 +18,12 @@ protocol APIClient {
 extension APIClient {
     
     func dispatchRequest<T: Decodable>(with request: URLRequest, decodingType: T.Type) -> Promise<T> {
+        
+        print("Request: "+(request.url?.absoluteString ?? "error"))
+        print(request.allHTTPHeaderFields ?? [:])
+        print("Body: "+(String(data: request.httpBody ?? Data(), encoding: .utf8) ?? ""))
+        print("Method: "+(request.httpMethod ?? ""))
+        
         return firstly { networkSession.buildSession().dataTask(.promise, with: request) }.map({ data, response in
             guard let httpResponse = response as? HTTPURLResponse else { throw ResponseError.timeout }
             
