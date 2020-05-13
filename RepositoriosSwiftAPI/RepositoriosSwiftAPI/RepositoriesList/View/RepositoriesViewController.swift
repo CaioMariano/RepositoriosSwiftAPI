@@ -18,6 +18,8 @@ class RepositoriesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        repositoriesTableView?.delegate = self
+        repositoriesTableView?.dataSource = self
         registerNibs()
     }
 
