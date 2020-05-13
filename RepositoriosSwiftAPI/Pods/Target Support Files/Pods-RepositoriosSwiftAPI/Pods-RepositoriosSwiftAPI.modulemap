@@ -1,0 +1,6 @@
+framework module Pods_RepositoriosSwiftAPI {
+  umbrella header "Pods-RepositoriosSwiftAPI-umbrella.h"
+
+  export *
+  module * { export * }
+}
