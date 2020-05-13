@@ -20,6 +20,7 @@
 		7F98F0B1246B6FA600165400 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98F0B0246B6FA600165400 /* APIClient.swift */; };
 		7F98F0B3246B712600165400 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98F0B2246B712600165400 /* APIError.swift */; };
 		7F98F0B5246B7D7100165400 /* SwiftRepositoriesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98F0B4246B7D7100165400 /* SwiftRepositoriesEndpoint.swift */; };
+		7F98F0B8246B81AD00165400 /* SwiftRepositoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98F0B7246B81AD00165400 /* SwiftRepositoriesModel.swift */; };
 		BE48AA982D2AEFB14A130F4E /* Pods_RepositoriosSwiftAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78622D17C4EBA6E9FD861BDC /* Pods_RepositoriosSwiftAPITests.framework */; };
 		ED04B10916DF8AAAAC5C5A83 /* Pods_RepositoriosSwiftAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F517E09A58CE0128344BC98 /* Pods_RepositoriosSwiftAPI.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		7F98F0B0246B6FA600165400 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		7F98F0B2246B712600165400 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		7F98F0B4246B7D7100165400 /* SwiftRepositoriesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRepositoriesEndpoint.swift; sourceTree = "<group>"; };
+		7F98F0B7246B81AD00165400 /* SwiftRepositoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRepositoriesModel.swift; sourceTree = "<group>"; };
 		A28B9044872146D9B964D4B7 /* Pods-RepositoriosSwiftAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepositoriosSwiftAPI.debug.xcconfig"; path = "Target Support Files/Pods-RepositoriosSwiftAPI/Pods-RepositoriosSwiftAPI.debug.xcconfig"; sourceTree = "<group>"; };
 		DA61E7FEC5B077A5B57718A4 /* Pods-RepositoriosSwiftAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepositoriosSwiftAPITests.debug.xcconfig"; path = "Target Support Files/Pods-RepositoriosSwiftAPITests/Pods-RepositoriosSwiftAPITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +173,7 @@
 		7F98F0A7246B696C00165400 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				7F98F0B6246B817B00165400 /* Models */,
 				7F98F0AA246B69FB00165400 /* Endpoint */,
 				7F98F0AD246B6B3900165400 /* Network */,
 			);
@@ -195,6 +198,14 @@
 				7F98F0B2246B712600165400 /* APIError.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		7F98F0B6246B817B00165400 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7F98F0B7246B81AD00165400 /* SwiftRepositoriesModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,6 +379,7 @@
 				7F98F087246B629400165400 /* ViewController.swift in Sources */,
 				7F98F0B1246B6FA600165400 /* APIClient.swift in Sources */,
 				7F98F083246B629400165400 /* AppDelegate.swift in Sources */,
+				7F98F0B8246B81AD00165400 /* SwiftRepositoriesModel.swift in Sources */,
 				7F98F0A9246B69C400165400 /* Endpoint.swift in Sources */,
 				7F98F0AF246B6E6500165400 /* NetworkSession.swift in Sources */,
 				7F98F0B3246B712600165400 /* APIError.swift in Sources */,
