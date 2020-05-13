@@ -14,15 +14,20 @@ class RepositoriesViewController: UIViewController {
     @IBOutlet weak var repositoriesTableView: UITableView?
     
     //MARK: - Properties
-     var repositoryCellNibName = "RepositoryTableViewCell"
-
+    var repositoryCellNibName = "RepositoryTableViewCell"
+    var viewModel: RepositoriesViewModelProtocol = RepositoriesViewModel()
+    
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         repositoriesTableView?.delegate = self
         repositoriesTableView?.dataSource = self
         registerNibs()
     }
-
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.loadSwiftRepositories()
+    }
 }
 

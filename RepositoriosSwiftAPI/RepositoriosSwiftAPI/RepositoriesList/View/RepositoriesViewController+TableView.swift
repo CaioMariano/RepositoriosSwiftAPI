@@ -11,11 +11,11 @@ import UIKit
 extension RepositoriesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.getNumberOfRowsInSection()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return viewModel.getNumberOfSections()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -24,13 +24,13 @@ extension RepositoriesViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return viewModel.getHeightForRow()
     }
     
     //MARK: - Private Functions
     private func setupRepositoryCells(_ tableView: UITableView, cellForRow indexPath: IndexPath) -> UITableViewCell {
         let cell: RepositoryTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        //cell.setLabelTexts(repositoryName: "teste", repositoryStars: 444, ownerName: "teste", ownerImage: "teste")
+        cell.setLabelTexts(repositoryName: viewModel.getRepositoryName(index: indexPath.row), repositoryStars: viewModel.getRepositoryStars(index: indexPath.row), ownerName: viewModel.getOwnerName(index: indexPath.row), ownerImage: viewModel.getOwnerImage(index: indexPath.row))
         return cell
     }
     
