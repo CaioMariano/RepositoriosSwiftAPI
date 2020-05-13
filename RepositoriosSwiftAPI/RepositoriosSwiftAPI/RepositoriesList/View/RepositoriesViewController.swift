@@ -9,10 +9,16 @@
 import UIKit
 
 class RepositoriesViewController: UIViewController {
+    
+    //MARK: - Outlets
+    @IBOutlet weak var repositoriesTableView: UITableView?
+    
+    //MARK: - Properties
+     var repositoryCellNibName = "RepositoryTableViewCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        registerNibs()
     }
 
 

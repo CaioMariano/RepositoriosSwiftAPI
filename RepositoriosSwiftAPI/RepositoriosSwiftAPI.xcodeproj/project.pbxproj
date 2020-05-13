@@ -10,6 +10,8 @@
 		7F40AE88246C94D6006D4DDE /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F40AE87246C94D6006D4DDE /* RepositoriesViewModel.swift */; };
 		7F40AE8D246C9A29006D4DDE /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F40AE8B246C9A29006D4DDE /* RepositoryTableViewCell.xib */; };
 		7F40AE8E246C9A29006D4DDE /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F40AE8C246C9A29006D4DDE /* RepositoryTableViewCell.swift */; };
+		7F40AE91246CA473006D4DDE /* RepositoriesViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F40AE90246CA473006D4DDE /* RepositoriesViewController+View.swift */; };
+		7F40AE94246CA5EA006D4DDE /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F40AE93246CA5EA006D4DDE /* Identifiable.swift */; };
 		7F98F083246B629400165400 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98F082246B629400165400 /* AppDelegate.swift */; };
 		7F98F085246B629400165400 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98F084246B629400165400 /* SceneDelegate.swift */; };
 		7F98F087246B629400165400 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98F086246B629400165400 /* RepositoriesViewController.swift */; };
@@ -48,6 +50,8 @@
 		7F40AE87246C94D6006D4DDE /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
 		7F40AE8B246C9A29006D4DDE /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
 		7F40AE8C246C9A29006D4DDE /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		7F40AE90246CA473006D4DDE /* RepositoriesViewController+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoriesViewController+View.swift"; sourceTree = "<group>"; };
+		7F40AE93246CA5EA006D4DDE /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		7F98F07F246B629400165400 /* RepositoriosSwiftAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepositoriosSwiftAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F98F082246B629400165400 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F98F084246B629400165400 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 			children = (
 				7F98F088246B629400165400 /* Repositories.storyboard */,
 				7F98F086246B629400165400 /* RepositoriesViewController.swift */,
+				7F40AE90246CA473006D4DDE /* RepositoriesViewController+View.swift */,
 				7F40AE8A246C99E0006D4DDE /* SubViews */,
 			);
 			path = View;
@@ -156,6 +161,14 @@
 			path = RepositoryCell;
 			sourceTree = "<group>";
 		};
+		7F40AE92246CA5CB006D4DDE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7F40AE93246CA5EA006D4DDE /* Identifiable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		7F98F076246B629400165400 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +195,7 @@
 				7F40AE86246C94AF006D4DDE /* RepositoriesList */,
 				7F98F0A7246B696C00165400 /* Data */,
 				7F98F0A4246B65D800165400 /* LaunchScreen */,
+				7F40AE92246CA5CB006D4DDE /* Extensions */,
 				7F98F0A5246B661800165400 /* Resources */,
 			);
 			path = RepositoriosSwiftAPI;
@@ -461,6 +475,8 @@
 				7F98F0BE246B8A8600165400 /* SwiftRepositoriesInteractor.swift in Sources */,
 				7F98F0AC246B6A1600165400 /* RequestMethod.swift in Sources */,
 				7F98F0B5246B7D7100165400 /* SwiftRepositoriesEndpoint.swift in Sources */,
+				7F40AE94246CA5EA006D4DDE /* Identifiable.swift in Sources */,
+				7F40AE91246CA473006D4DDE /* RepositoriesViewController+View.swift in Sources */,
 				7F98F085246B629400165400 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
