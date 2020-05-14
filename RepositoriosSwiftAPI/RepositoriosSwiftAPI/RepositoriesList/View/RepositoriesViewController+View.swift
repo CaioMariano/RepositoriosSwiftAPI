@@ -14,4 +14,9 @@ extension RepositoriesViewController {
         let repositoryTableViewCell = UINib(nibName: repositoryCellNibName, bundle: nil)
         repositoriesTableView?.register(repositoryTableViewCell, forCellReuseIdentifier: RepositoryTableViewCell.reuseIdentifier)
     }
+    
+    @objc func refreshData(_ sender: Any) {
+        viewModel.loadSwiftRepositories()
+        stopRefreshControl()
+    }
 }

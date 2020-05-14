@@ -28,6 +28,7 @@ class RepositoriesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupRefreshControl(forTable: repositoriesTableView, #selector(refreshData(_:)))
         viewModel.loadSwiftRepositories()
     }
 }
