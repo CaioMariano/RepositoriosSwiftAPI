@@ -12,6 +12,7 @@ class RepositoriesViewController: UIViewController {
     
     //MARK: - Outlets
     @IBOutlet weak var repositoriesTableView: UITableView?
+    @IBOutlet weak var loadIndicator: UIActivityIndicatorView?
     
     //MARK: - Properties
     var repositoryCellNibName = "RepositoryTableViewCell"

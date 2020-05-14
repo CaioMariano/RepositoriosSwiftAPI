@@ -16,30 +16,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swift - Repositórios" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4R9-CB-26f">
-                                <rect key="frame" x="20" y="84" width="374" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repositórios em Swift" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4R9-CB-26f">
+                                <rect key="frame" x="20" y="84" width="374" height="40"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="33"/>
+                                <color key="textColor" red="1" green="0.68503317640000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a2D-tK-vGV">
-                                <rect key="frame" x="20" y="134" width="374" height="718"/>
+                                <rect key="frame" x="20" y="131" width="374" height="721"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C3K-kk-vPP">
-                                <rect key="frame" x="0.0" y="133" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="130" width="414" height="1"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="dHS-MK-hXE"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="YvR-6N-YRB">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <color key="color" red="0.46300000000000002" green="0.46300000000000002" blue="0.46300000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="4R9-CB-26f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="16L-lh-s3N"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C3K-kk-vPP" secondAttribute="trailing" id="FfX-nL-uZA"/>
+                            <constraint firstItem="YvR-6N-YRB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ijg-BX-IN0"/>
                             <constraint firstItem="a2D-tK-vGV" firstAttribute="top" secondItem="C3K-kk-vPP" secondAttribute="bottom" id="PpY-Mc-ydJ"/>
                             <constraint firstItem="4R9-CB-26f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Zrw-k7-DFk"/>
+                            <constraint firstItem="YvR-6N-YRB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bhZ-H4-5VK"/>
                             <constraint firstItem="a2D-tK-vGV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cr0-fc-oHR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a2D-tK-vGV" secondAttribute="trailing" constant="20" id="fOv-75-C7Q"/>
                             <constraint firstItem="C3K-kk-vPP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g96-Ck-q3f"/>
@@ -50,6 +56,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="loadIndicator" destination="YvR-6N-YRB" id="wQf-3U-4zz"/>
                         <outlet property="repositoriesTableView" destination="a2D-tK-vGV" id="pgU-T0-P9m"/>
                     </connections>
                 </viewController>

@@ -20,8 +20,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IkJ-5f-ml3">
                         <rect key="frame" x="15" y="15" width="362" height="164"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxxxxxxxxxxxxxx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7C-jE-dIN">
-                                <rect key="frame" x="94" y="10" width="174.5" height="27.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxxxxxxxxxxxxxx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="s7C-jE-dIN">
+                                <rect key="frame" x="10" y="10" width="342" height="27.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -56,12 +56,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="s7C-jE-dIN" firstAttribute="centerX" secondItem="IkJ-5f-ml3" secondAttribute="centerX" id="3fG-Up-jKX"/>
                             <constraint firstItem="joa-Zo-Ivw" firstAttribute="firstBaseline" secondItem="s7C-jE-dIN" secondAttribute="firstBaseline" constant="15" id="4Tb-Mf-r7Y"/>
                             <constraint firstItem="s7C-jE-dIN" firstAttribute="top" secondItem="IkJ-5f-ml3" secondAttribute="top" constant="10" id="Qwr-Dq-4Zt"/>
                             <constraint firstItem="Hbz-NU-Wb4" firstAttribute="leading" secondItem="qTE-jH-iwa" secondAttribute="trailing" constant="5" id="bHf-jb-f9P"/>
+                            <constraint firstItem="s7C-jE-dIN" firstAttribute="leading" secondItem="IkJ-5f-ml3" secondAttribute="leading" constant="10" id="bIA-Cs-biZ"/>
                             <constraint firstItem="joa-Zo-Ivw" firstAttribute="leading" secondItem="IkJ-5f-ml3" secondAttribute="leading" constant="50" id="bRV-bb-iQM"/>
                             <constraint firstAttribute="trailing" secondItem="Hbz-NU-Wb4" secondAttribute="trailing" constant="10" id="kcg-C9-B05"/>
+                            <constraint firstAttribute="trailing" secondItem="s7C-jE-dIN" secondAttribute="trailing" constant="10" id="l58-gj-uSy"/>
                             <constraint firstItem="qTE-jH-iwa" firstAttribute="leading" secondItem="aad-IN-cOC" secondAttribute="leading" id="miA-zC-dKv"/>
                             <constraint firstItem="Hbz-NU-Wb4" firstAttribute="centerY" secondItem="qTE-jH-iwa" secondAttribute="centerY" id="rcz-70-8ex"/>
                             <constraint firstItem="aad-IN-cOC" firstAttribute="leading" secondItem="joa-Zo-Ivw" secondAttribute="trailing" constant="10" id="wcP-6U-uGP"/>

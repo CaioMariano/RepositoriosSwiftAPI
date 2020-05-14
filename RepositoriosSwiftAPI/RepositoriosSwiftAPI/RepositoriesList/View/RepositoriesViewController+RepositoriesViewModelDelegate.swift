@@ -11,6 +11,7 @@ import UIKit
 extension RepositoriesViewController: RepositoriesViewModelDelegate {
     
     func reloadTableView() {
+        loadIndicator?.isHidden = true
         repositoriesTableView?.reloadData()
     }
 }
