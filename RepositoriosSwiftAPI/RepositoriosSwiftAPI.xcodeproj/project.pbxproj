@@ -17,6 +17,7 @@
 		7F40AE9A246CBA53006D4DDE /* RepositoriesViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F40AE99246CBA53006D4DDE /* RepositoriesViewModelDelegate.swift */; };
 		7F40AE9C246CCC37006D4DDE /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F40AE9B246CCC37006D4DDE /* ImageView.swift */; };
 		7F40AE9E246CD6DD006D4DDE /* RefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F40AE9D246CD6DD006D4DDE /* RefreshControl.swift */; };
+		7F40AEA0246CE755006D4DDE /* RepositoriesViewController+ScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F40AE9F246CE755006D4DDE /* RepositoriesViewController+ScrollViewDelegate.swift */; };
 		7F98F083246B629400165400 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98F082246B629400165400 /* AppDelegate.swift */; };
 		7F98F085246B629400165400 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98F084246B629400165400 /* SceneDelegate.swift */; };
 		7F98F087246B629400165400 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F98F086246B629400165400 /* RepositoriesViewController.swift */; };
@@ -62,6 +63,7 @@
 		7F40AE99246CBA53006D4DDE /* RepositoriesViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModelDelegate.swift; sourceTree = "<group>"; };
 		7F40AE9B246CCC37006D4DDE /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		7F40AE9D246CD6DD006D4DDE /* RefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshControl.swift; sourceTree = "<group>"; };
+		7F40AE9F246CE755006D4DDE /* RepositoriesViewController+ScrollViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoriesViewController+ScrollViewDelegate.swift"; sourceTree = "<group>"; };
 		7F98F07F246B629400165400 /* RepositoriosSwiftAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepositoriosSwiftAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F98F082246B629400165400 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F98F084246B629400165400 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				7F98F086246B629400165400 /* RepositoriesViewController.swift */,
 				7F40AE90246CA473006D4DDE /* RepositoriesViewController+View.swift */,
 				7F40AE95246CA7A0006D4DDE /* RepositoriesViewController+TableView.swift */,
+				7F40AE9F246CE755006D4DDE /* RepositoriesViewController+ScrollViewDelegate.swift */,
 				7F40AE97246CBA16006D4DDE /* RepositoriesViewController+RepositoriesViewModelDelegate.swift */,
 				7F40AE8A246C99E0006D4DDE /* SubViews */,
 			);
@@ -478,6 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F40AE9C246CCC37006D4DDE /* ImageView.swift in Sources */,
+				7F40AEA0246CE755006D4DDE /* RepositoriesViewController+ScrollViewDelegate.swift in Sources */,
 				7F40AE9A246CBA53006D4DDE /* RepositoriesViewModelDelegate.swift in Sources */,
 				7F98F0BB246B881700165400 /* SwiftReposRepository.swift in Sources */,
 				7F98F087246B629400165400 /* RepositoriesViewController.swift in Sources */,

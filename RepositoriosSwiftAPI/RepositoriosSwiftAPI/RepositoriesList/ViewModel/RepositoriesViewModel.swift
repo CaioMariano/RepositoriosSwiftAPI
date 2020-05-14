@@ -18,14 +18,16 @@ protocol RepositoriesViewModelProtocol {
     func getOwnerImage(index: Int) -> String
     func getHeightForRow() -> CGFloat
     var delegate: RepositoriesViewModelDelegate? { get set }
+    var pageIndex: Int { get set }
 }
 
 class RepositoriesViewModel: RepositoriesViewModelProtocol {
     
     //MARK: - Properties
     var interactor: SwiftRepositoriesInteractorProtocol
-    var swiftRepositories: [SwiftRepositoriesItems]?
+    var swiftRepositories = [SwiftRepositoriesItems]()
     var delegate: RepositoriesViewModelDelegate?
+    var pageIndex = 1
     private let numberOfSections = 1
     private let heightForRow = CGFloat(180)
     
@@ -37,8 +39,8 @@ class RepositoriesViewModel: RepositoriesViewModelProtocol {
     
     //MARK: - Public Functions
     func loadSwiftRepositories() {
-        interactor.getSwiftRepositories().done({ [weak self] (repositories) in
-            self?.swiftRepositories = repositories.items
+        interactor.getSwiftRepositories(page: pageIndex).done({ [weak self] (repositories) in
+            self?.swiftRepositories += repositories.items
             self?.delegate?.reloadTableView()
         }).catch { (error) in
             print(error)
@@ -46,8 +48,8 @@ class RepositoriesViewModel: RepositoriesViewModelProtocol {
     }
     
     func getNumberOfRowsInSection() -> Int {
-        let rows = swiftRepositories?.isEmpty != false ? 0 : swiftRepositories?.count
-        return rows ?? .init()
+        let rows = swiftRepositories.isEmpty != false ? 0 : swiftRepositories.count
+        return rows
     }
     
     func getNumberOfSections() -> Int {
@@ -55,19 +57,19 @@ class RepositoriesViewModel: RepositoriesViewModelProtocol {
     }
     
     func getRepositoryName(index: Int) -> String {
-        return swiftRepositories?[index].name ?? .init()
+        return swiftRepositories[index].name
     }
     
     func getRepositoryStars(index: Int) -> Int {
-        return swiftRepositories?[index].stars ?? .init()
+        return swiftRepositories[index].stars
     }
     
     func getOwnerName(index: Int) -> String {
-        return swiftRepositories?[index].owner.ownerName ?? .init()
+        return swiftRepositories[index].owner.ownerName
     }
     
     func getOwnerImage(index: Int) -> String {
-        return swiftRepositories?[index].owner.ownerImage ?? .init()
+        return swiftRepositories[index].owner.ownerImage
     }
     
     func getHeightForRow() -> CGFloat {
