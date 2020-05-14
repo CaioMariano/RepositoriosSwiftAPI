@@ -27,7 +27,7 @@ class RepositoriesViewModel: RepositoriesViewModelProtocol {
     var swiftRepositories: [SwiftRepositoriesItems]?
     var delegate: RepositoriesViewModelDelegate?
     private let numberOfSections = 1
-    private let heightForRow = CGFloat(200)
+    private let heightForRow = CGFloat(180)
     
     //MARK: - Initialization
     init(interactor: SwiftRepositoriesInteractorProtocol = SwiftRepositoriesInteractor(), delegate: RepositoriesViewModelDelegate? = nil) {
