@@ -27,21 +27,13 @@ extension APIClient {
         return firstly { networkSession.buildSession().dataTask(.promise, with: request) }.map({ data, response in
             guard let httpResponse = response as? HTTPURLResponse else { throw ResponseError.timeout }
             
-            guard 200...299 ~= httpResponse.statusCode else {
-                if let apiResponseError = try? JSONDecoder().decode(APIResponseError.self, from: data) {
-                    throw ResponseError.api(error: apiResponseError)
+            if 200...299 ~= httpResponse.statusCode {
+                if data.isEmpty, let emptyResponse = NoData() as? T {
+                    return emptyResponse
                 }
-                throw ResponseError.server
+                return try JSONDecoder().decode(T.self, from: data)
             }
-            
-            if let dataDecodable = try? JSONDecoder().decode(DataDecodable<T>.self, from: data).data {
-                return dataDecodable
-            } else if let data = try? JSONDecoder().decode(T.self, from: data) {
-                return data
-            } else {
-                throw ResponseError.jsonConversionFailure
-            }
-            
+            throw (try? JSONDecoder().decode(APIResponseError.self, from: data))?.type.standarizedType() ?? ResponseError.withStatusCode(httpResponse.statusCode)
         }).recover({ (error) -> Promise<T> in
             if let apiError = error as? ResponseError { throw apiError }
             throw ResponseError.timeout
@@ -49,7 +41,5 @@ extension APIClient {
     }
 }
 
-struct DataDecodable<T: Decodable>: Decodable {
-    let data: T
-}
+struct NoData: Decodable {}
 

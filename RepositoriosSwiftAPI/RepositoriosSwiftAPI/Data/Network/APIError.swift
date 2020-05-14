@@ -6,27 +6,40 @@
 //  Copyright © 2020 Caio Araujo Mariano. All rights reserved.
 //
 
-struct APIResponseError: Codable {
+struct APIResponseError: Codable, Error {
+    let type: ResponseErrorType
+    
+    enum CodingKeys: String, CodingKey {
+        case type = "error"
+    }
+}
+
+struct ResponseErrorType: Codable {
+    let code: Int
     let message: String
+    
+    func standarizedType() -> ResponseError {
+        switch code {
+        case 400: return .invalidData
+        case 403: return .unauthorized
+        case 404: return .timeout
+        default: return .server
+        }
+    }
 }
 
 enum ResponseError: Error {
     
-    case api(error: APIResponseError)
-    case timeout
-    case jsonConversionFailure
-    case server
+    case timeout,jsonConversionFailure, server, invalidData, unauthorized
     
     var localizedTitle: String {
         switch self {
         case .jsonConversionFailure:
             return "Error"
-        case .api(_):
-            return "Request error"
         case .timeout:
             return "Timeout"
-        case .server:
-            return "Server error"
+        default:
+            return "There was an internal error in our servers"
         }
     }
     
@@ -36,10 +49,17 @@ enum ResponseError: Error {
             return "Internal error"
         case .timeout:
             return "You seem to be offline."
-        case .server:
+        default:
             return "There was an internal error in our servers"
-        case .api(let error):
-            return error.message
+        }
+    }
+    
+    static func withStatusCode(_ code: Int) -> ResponseError {
+        switch code {
+        case 400: return .invalidData
+        case 403: return .unauthorized
+        case 404: return .timeout
+        default: return .server
         }
     }
 }

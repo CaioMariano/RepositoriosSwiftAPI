@@ -14,4 +14,9 @@ extension RepositoriesViewController: RepositoriesViewModelDelegate {
         loadIndicator?.isHidden = true
         repositoriesTableView?.reloadData()
     }
+    
+    func showError(title: String, message: String) {
+       let topController = UIApplication.shared.keyWindow?.rootViewController
+        topController?.showAlert(withTitle: title, message: message)
+    }
 }

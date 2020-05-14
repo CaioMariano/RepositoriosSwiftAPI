@@ -10,4 +10,5 @@ import Foundation
 
 protocol RepositoriesViewModelDelegate {
     func reloadTableView()
+    func showError(title: String, message: String)
 }

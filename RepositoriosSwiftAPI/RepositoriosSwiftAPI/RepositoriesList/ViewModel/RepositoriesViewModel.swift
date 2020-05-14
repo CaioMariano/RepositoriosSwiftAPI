@@ -43,7 +43,7 @@ class RepositoriesViewModel: RepositoriesViewModelProtocol {
             self?.swiftRepositories += repositories.items
             self?.delegate?.reloadTableView()
         }).catch { (error) in
-            print(error)
+            self.showError(error: error)
         }
     }
     
@@ -74,5 +74,21 @@ class RepositoriesViewModel: RepositoriesViewModelProtocol {
     
     func getHeightForRow() -> CGFloat {
         return heightForRow
+    }
+    
+    //MARK: - Private Functions
+    private func showError(error: Error) {
+        let timeoutError = ResponseError.timeout
+        let serverError = ResponseError.server
+        var errorMessage = ""
+        var errorTitle = ""
+        if case ResponseError.timeout = error {
+            errorMessage = timeoutError.localizedTitle
+            errorTitle = timeoutError.localizedDescription
+        } else {
+            errorMessage = serverError.localizedTitle
+            errorTitle = serverError.localizedDescription
+        }
+        delegate?.showError(title: errorMessage, message: errorTitle)
     }
 }
