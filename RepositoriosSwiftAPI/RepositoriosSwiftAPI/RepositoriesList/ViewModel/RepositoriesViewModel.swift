@@ -17,6 +17,7 @@ protocol RepositoriesViewModelProtocol {
     func getOwnerName(index: Int) -> String
     func getOwnerImage(index: Int) -> String
     func getHeightForRow() -> CGFloat
+    var delegate: RepositoriesViewModelDelegate? { get set }
 }
 
 class RepositoriesViewModel: RepositoriesViewModelProtocol {
@@ -24,25 +25,28 @@ class RepositoriesViewModel: RepositoriesViewModelProtocol {
     //MARK: - Properties
     var interactor: SwiftRepositoriesInteractorProtocol
     var swiftRepositories: [SwiftRepositoriesItems]?
+    var delegate: RepositoriesViewModelDelegate?
     private let numberOfSections = 1
     private let heightForRow = CGFloat(200)
     
     //MARK: - Initialization
-    init(interactor: SwiftRepositoriesInteractorProtocol = SwiftRepositoriesInteractor()) {
+    init(interactor: SwiftRepositoriesInteractorProtocol = SwiftRepositoriesInteractor(), delegate: RepositoriesViewModelDelegate? = nil) {
         self.interactor = interactor
+        self.delegate = delegate
     }
     
     //MARK: - Public Functions
     func loadSwiftRepositories() {
         interactor.getSwiftRepositories().done({ [weak self] (repositories) in
             self?.swiftRepositories = repositories.items
+            self?.delegate?.reloadTableView()
         }).catch { (error) in
             print(error)
         }
     }
     
     func getNumberOfRowsInSection() -> Int {
-        let rows = swiftRepositories?.isEmpty != false ? swiftRepositories?.count : 0
+        let rows = swiftRepositories?.isEmpty != false ? 0 : swiftRepositories?.count
         return rows ?? .init()
     }
     

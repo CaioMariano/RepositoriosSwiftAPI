@@ -22,6 +22,7 @@ class RepositoriesViewController: UIViewController {
         super.viewDidLoad()
         repositoriesTableView?.delegate = self
         repositoriesTableView?.dataSource = self
+        viewModel.delegate = self
         registerNibs()
     }
     

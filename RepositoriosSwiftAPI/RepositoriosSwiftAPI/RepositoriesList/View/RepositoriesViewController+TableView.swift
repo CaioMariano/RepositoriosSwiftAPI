@@ -33,6 +33,4 @@ extension RepositoriesViewController: UITableViewDelegate, UITableViewDataSource
         cell.setLabelTexts(repositoryName: viewModel.getRepositoryName(index: indexPath.row), repositoryStars: viewModel.getRepositoryStars(index: indexPath.row), ownerName: viewModel.getOwnerName(index: indexPath.row), ownerImage: viewModel.getOwnerImage(index: indexPath.row))
         return cell
     }
-    
-    
 }
