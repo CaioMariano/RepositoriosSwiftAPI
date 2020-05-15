@@ -238,7 +238,6 @@
 			children = (
 				7F40AE86246C94AF006D4DDE /* RepositoriesList */,
 				7F98F0A7246B696C00165400 /* Data */,
-				7F98F0A4246B65D800165400 /* LaunchScreen */,
 				7F40AE92246CA5CB006D4DDE /* Extensions */,
 				7F98F0A5246B661800165400 /* Resources */,
 			);
@@ -266,6 +265,7 @@
 		7F98F0A5246B661800165400 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7F98F0A4246B65D800165400 /* LaunchScreen */,
 				7F98F0A6246B664000165400 /* AppDelegate */,
 				7F98F08B246B629900165400 /* Assets.xcassets */,
 				7F98F090246B629900165400 /* Info.plist */,
