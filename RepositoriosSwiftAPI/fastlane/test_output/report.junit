@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='RepositoriosSwiftAPITests.xctest' tests='12' failures='0'>
+  <testsuite name='RepositoriosSwiftAPITests.RepositoriesViewModelTest' tests='7' failures='0'>
+    <testcase classname='RepositoriosSwiftAPITests.RepositoriesViewModelTest' name='RepositoriesViewModelTest_bahavior_unit_tests__Should_validate_number_of_rows_in_section' time='0.007'/>
+    <testcase classname='RepositoriosSwiftAPITests.RepositoriesViewModelTest' name='RepositoriesViewModelTest_bahavior_unit_tests__Should_validate_number_of_sections' time='0.000'/>
+    <testcase classname='RepositoriosSwiftAPITests.RepositoriesViewModelTest' name='RepositoriesViewModelTest_bahavior_unit_tests__Should_validate_repository_name' time='0.000'/>
+    <testcase classname='RepositoriosSwiftAPITests.RepositoriesViewModelTest' name='RepositoriesViewModelTest_bahavior_unit_tests__Should_validate_repository_stars' time='0.000'/>
+    <testcase classname='RepositoriosSwiftAPITests.RepositoriesViewModelTest' name='RepositoriesViewModelTest_bahavior_unit_tests__Should_validate_owner_name' time='0.002'/>
+    <testcase classname='RepositoriosSwiftAPITests.RepositoriesViewModelTest' name='RepositoriesViewModelTest_bahavior_unit_tests__Should_validate_owner_image' time='0.000'/>
+    <testcase classname='RepositoriosSwiftAPITests.RepositoriesViewModelTest' name='RepositoriesViewModelTest_bahavior_unit_tests__Should_validate_height_for_row' time='0.001'/>
+  </testsuite>
+  <testsuite name='RepositoriosSwiftAPITests.SwiftRepositoriesEndpointTests' tests='5' failures='0'>
+    <testcase classname='RepositoriosSwiftAPITests.SwiftRepositoriesEndpointTests' name='Swift_repositories_endpoints_behavior_unit_tests__Should_validate_path' time='0.000'/>
+    <testcase classname='RepositoriosSwiftAPITests.SwiftRepositoriesEndpointTests' name='Swift_repositories_endpoints_behavior_unit_tests__Should_validate_query_items' time='0.001'/>
+    <testcase classname='RepositoriosSwiftAPITests.SwiftRepositoriesEndpointTests' name='Swift_repositories_endpoints_behavior_unit_tests__Should_validate_request_method' time='0.001'/>
+    <testcase classname='RepositoriosSwiftAPITests.SwiftRepositoriesEndpointTests' name='Swift_repositories_endpoints_behavior_unit_tests__Should_validate_host' time='0.000'/>
+    <testcase classname='RepositoriosSwiftAPITests.SwiftRepositoriesEndpointTests' name='Swift_repositories_endpoints_behavior_unit_tests__Should_validate_scheme' time='0.001'/>
+  </testsuite>
+</testsuites>
