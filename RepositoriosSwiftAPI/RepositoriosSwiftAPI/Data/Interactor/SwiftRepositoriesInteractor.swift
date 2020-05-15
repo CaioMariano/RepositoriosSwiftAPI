@@ -8,7 +8,7 @@
 
 import PromiseKit
 
-protocol SwiftRepositoriesInteractorProtocol: class {
+protocol SwiftRepositoriesInteractorProtocol {
     func getSwiftRepositories(page: Int) -> Promise<SwiftRepositories>
 }
 

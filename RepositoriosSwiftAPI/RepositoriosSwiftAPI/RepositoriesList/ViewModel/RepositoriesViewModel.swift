@@ -19,6 +19,7 @@ protocol RepositoriesViewModelProtocol {
     func getHeightForRow() -> CGFloat
     var delegate: RepositoriesViewModelDelegate? { get set }
     var pageIndex: Int { get set }
+    var swiftRepositories: [SwiftRepositoriesItems] { get set }
 }
 
 class RepositoriesViewModel: RepositoriesViewModelProtocol {

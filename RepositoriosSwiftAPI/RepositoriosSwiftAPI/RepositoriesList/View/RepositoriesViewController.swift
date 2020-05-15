@@ -26,9 +26,9 @@ class RepositoriesViewController: UIViewController {
         viewModel.delegate = self
         registerNibs()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+ 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         setupRefreshControl(forTable: repositoriesTableView, #selector(refreshData(_:)))
         viewModel.loadSwiftRepositories()
     }

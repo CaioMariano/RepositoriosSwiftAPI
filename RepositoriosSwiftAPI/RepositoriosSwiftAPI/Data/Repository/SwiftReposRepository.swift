@@ -6,7 +6,6 @@
 //  Copyright © 2020 Caio Araujo Mariano. All rights reserved.
 //
 
-import Foundation
 import PromiseKit
 
 protocol SwiftReposRepositoryProtocol: class {
